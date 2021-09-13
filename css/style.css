@@ -1,34 +1,71 @@
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
+  background-color: #e2e2e2!important;
+
 }
-.search-field {
-  border: none;
-  border-radius: 50px;
-  padding: 5px;
-  outline: none;
+/* === Store name css === */
+.three h1 {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5em;
+  padding-bottom: 15px;
+  position: relative;
 }
-.search-field:hover {
-  outline: none;
-  border: none;
+.three h1:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 55px;
+  background-color: #111;
 }
+.three h1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 1px;
+  width: 95%;
+  max-width: 255px;
+  background-color: #333;
+}
+
+/* search css start */
 .search-box {
-  border: 1px solid rgb(3, 118, 211);
-  width: 281px;
-  border-radius: 5px;
-  margin: auto;
-  margin-top: 50px;
+  display: flex;
+}
+
+.searchTerm {
+  border: 3px solid #000;
   border-right: none;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
 }
-.search-button {
-  padding: 10px 50px;
-  border-radius: 25px;
-  margin-left: 20px;
+
+.searchTerm:focus{
+  color: #000;
 }
+
+.searchButton {
+  width: 40px;
+  border: 1px solid #000;
+  background: #000;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  font-size: 20px;
+}
+/* search css end */
+
+/* Products css start */
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* border: 1px solid black; */
   text-align: center;
   width: 100%;
   margin: auto;
@@ -36,7 +73,6 @@ body {
   justify-content: center;
 }
 .single-product {
-  padding: 10px;
   transition: 0.6s;
 }
 .single-product:hover {
@@ -50,7 +86,6 @@ body {
 }
 .cart {
   width: 350px;
-  /* border: 1px solid green; */
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
   border-radius: 5px;
@@ -60,6 +95,17 @@ body {
 .cart-main {
   padding-right: 30px;
 }
+
+/* ratings css */
+.filled{
+  color:goldenrod;
+  font-size: 0.8em;
+}
+.unfilled{
+    color: lightgray;
+    font-size: 0.8em;
+}
+
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
@@ -67,7 +113,6 @@ body {
   }
   .cart {
     width: 300px;
-    /* border: 1px solid green; */
     padding: 10px;
     box-shadow: 10px 10px 20px gray;
     border-radius: 5px;
@@ -84,3 +129,6 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+
+
