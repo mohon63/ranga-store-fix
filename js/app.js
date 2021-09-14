@@ -33,7 +33,7 @@ const showProducts = (products) => {
             <h2>Price: $ ${product.price}</h2>
             </div>
             <div class="card-footer">
-            <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">Add to cart</button>
+            <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success me-1">Add to cart</button>
             <button id="details-btn" class="btn btn-danger">Details</button></div>
       </div>
       `;

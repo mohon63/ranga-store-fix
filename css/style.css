@@ -5,7 +5,7 @@ body {
 
 }
 /* === Store name css === */
-.three h1 {
+.store-name h1 {
   font-size: 28px;
   font-weight: 500;
   letter-spacing: 0;
@@ -13,7 +13,7 @@ body {
   padding-bottom: 15px;
   position: relative;
 }
-.three h1:before {
+.store-name h1:before {
   content: "";
   position: absolute;
   left: 0;
@@ -22,7 +22,7 @@ body {
   width: 55px;
   background-color: #111;
 }
-.three h1:after {
+.store-name h1:after {
   content: "";
   position: absolute;
   left: 0;
@@ -127,6 +127,10 @@ body {
   #all-products {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+  }
+  .cart{
+    position: relative;
+    width: 100%;
   }
 }
 
