@@ -21,10 +21,15 @@
 </head>
 
 <body>
+  <!-- modal area start-->
+  <div id="modal" class="modaL"></div>
+
   <header>
+    <!-- Nav area -->
     <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="#">p-Hero<span class="text-primary"> Online Store</span></a>
+        <a class="navbar-brand text-white fw-bold" href="#">p-Hero<span class="text-primary"> Online
+            Store</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
           aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -57,13 +62,13 @@
 
   <!-- Store name area  -->
   <div class="store-name d-flex justify-content-center mt-3">
-    <h1 class="text-center mt-3">p-Hero<span class="text-primary"> Online Store</span></h1>
+    <h1 class="text-center mt-3 fw-bold">p-Hero<span class="text-primary"> Online Store</span></h1>
   </div>
 
 
   <!-- Product search area  -->
   <div class="search d-flex justify-content-center my-5">
-    <input id="input-field" type="text" class="searchTerm w-25" placeholder="Search">
+    <input id="input-field" type="text" class="searchTerm" placeholder="Search">
     <button type="submit" class="searchButton" data-toggle="button" aria-pressed="false" autocomplete="off"
       id="search-btn" onclick="loadProducts()">
       <i class="fa fa-search"></i>
@@ -129,9 +134,11 @@
       </div><!-- My card area end -->
     </div><!-- End of row 9/3-->
   </main>
+
   <footer class="bg-dark p-2 mt-3">
     <p class="text-secondary text-center pt-2">allrights reserved by ©mohon</p>
   </footer>
+
   <!-- add javascript  file  -->
   <script src="./js/app.js"></script>
 </body>

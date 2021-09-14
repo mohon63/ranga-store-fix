@@ -34,13 +34,14 @@ const showProducts = (products) => {
             </div>
             <div class="card-footer">
             <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success me-1">Add to cart</button>
-            <button id="details-btn" class="btn btn-danger">Details</button></div>
+            <button id="details-btn" class="btn btn-primary" onclick="details(${product.id})">Details</button>
       </div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
 };
 
+// add to cart 
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -94,5 +95,38 @@ const updateTotal = () => {
     getInputValue("total-tax");
   document.getElementById("total").innerText = grandTotal.toFixed(2);
 };
+
+// API for modal 
+const details = id => {
+  fetch(`https://fakestoreapi.com/products/${id}`)
+    .then(res => res.json())
+    // .then(data => console.log(data))
+    .then(data => modal(data))
+}
+
+// show data on modal 
+const modal = data => {
+  const modalBox = document.getElementById('modal');
+  modalBox.style.display = 'block';
+  modalBox.innerHTML = '';
+  const desc = data.description;
+  const description = desc.slice(0, 100);
+  const title = data.title;
+  const finalTitle = title.slice(0, 20)
+  const div = document.createElement('div');
+  div.classList.add('singleModal');
+  div.innerHTML = `
+  <h4>Product Details</h4>
+  <img style="width: 100%; height: 250px;" src=${data.image} alt="">
+  <h4>Product name :${finalTitle} </h4>
+  <h5>Details : ${description}</h5>
+  <button class="closeBtn" onclick="closeModal()">Close</button>
+  `
+  modalBox.appendChild(div);
+}
+
+const closeModal = () => {
+  document.getElementById('modal').style.display = 'none';
+}
 
 loadProducts();

@@ -4,7 +4,33 @@ body {
   background-color: #e2e2e2!important;
 
 }
-/* === Store name css === */
+
+/* modal area start  */
+.modaL {
+  width: 25rem;
+  top: 10%;
+  left: 38%;
+  position: fixed;
+  z-index: 100;
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  box-shadow: 5px 5px 20px,-5px -5px 20px;
+  display: none;
+}
+
+/* close button on modal  */
+button.closeBtn {
+  background: #e55a5a;
+  border: 1px solid #ffffff05;
+  padding: 6px 15px;
+  border-radius: 5px;
+  color: white;
+  margin-left: 77%;
+}
+
+/* Store name css  */
 .store-name h1 {
   font-size: 28px;
   font-weight: 500;
@@ -33,12 +59,13 @@ body {
   background-color: #333;
 }
 
-/* search css start */
+/* search css */
 .search-box {
   display: flex;
 }
 
 .searchTerm {
+  width: 350px;
   border: 3px solid #000;
   border-right: none;
   padding: 5px;
@@ -60,7 +87,6 @@ body {
   border-radius: 0 5px 5px 0;
   font-size: 20px;
 }
-/* search css end */
 
 /* Products css start */
 #all-products {
@@ -131,6 +157,11 @@ body {
   .cart{
     position: relative;
     width: 100%;
+  }
+  .modaL{
+    top: 0%;
+    left: 10%;
+    width: 80%;
   }
 }
 
